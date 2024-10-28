@@ -1,0 +1,151 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #e0e4eb, #f7f9fc);
+}
+
+.card {
+  background: white;
+  padding: 50px 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative; /* Add this to allow positioning inside card */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.logo {
+  width: 70px;
+  margin-bottom: 15px;
+  animation: bounceInDown 1s;
+}
+
+h2 {
+  font-size: 1.7em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 25px;
+  font-size: 0.95em;
+  animation: fadeIn 1s;
+}
+
+.input-item {
+  --background: #f5f8fc;
+  --border-radius: 8px;
+  margin-bottom: 15px;
+  color: #090374;
+  animation: fadeInLeft 0.8s;
+}
+
+ion-label {
+  color: #555;
+  font-weight: 500;
+}
+
+ion-input {
+  --background: transparent;
+  color: #333;
+}
+
+.password-icon {
+  color: #999;
+  cursor: pointer;
+  animation: fadeInRight 0.8s;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  margin-top: 15px;
+  color: #555;
+  animation: fadeIn 1s;
+}
+
+.forgot-password {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.sign-in-button {
+  margin-top: 20px;
+  --border-radius: 8px;
+  --background: #1a4eb4;
+  color: white;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+.sign-in-button:hover {
+  --background: #1642a3;
+}
+
+.signup-link {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #555;
+  animation: fadeInUp 1s;
+}
+
+.signup-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Skip button styles */
+.skip-button {
+  position: absolute; /* Position relative to .card */
+  top: 10px;
+  right: 10px;
+  font-size: 0.9em;
+  color: #007bff;
+  z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 80px 10px;
+    max-width: 90%;
+    margin-top: 12%;
+    margin-left: 4%;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .subtitle {
+    font-size: 0.9em;
+  }
+
+  .sign-in-button {
+    font-size: 1em;
+  }
+
+  .signup-link {
+    font-size: 0.85em;
+  }
+
+  .password-icon {
+    margin-top: 10%;
+  }
+}

@@ -1,0 +1,86 @@
+<ion-content class="container">
+
+  <!-- Top Section with Location and Notification -->
+  <div class="top-section">
+    <div class="location">
+      <ion-icon name="location-outline"></ion-icon>
+      <span>Your Location</span>
+      <p *ngIf="!loading">{{ location }}</p>
+      <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
+    </div>
+    <ion-icon name="notifications-outline" class="notification-icon"></ion-icon>
+  </div>
+
+  <!-- Title and Search Bar -->
+  <h2>What are you looking for?</h2>
+  <ion-searchbar placeholder="Search for doctor, medicine, etc."></ion-searchbar>
+
+  <!-- Service Cards Section -->
+  <div class="services-grid">
+    <ion-card class="service-card">
+      <ion-icon name="person-outline" class="service-icon"></ion-icon>
+      <ion-card-header>
+        <ion-card-title>Doctors</ion-card-title>
+        <ion-card-subtitle>Book an appointment</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card class="service-card">
+      <ion-icon name="medkit-outline" class="service-icon"></ion-icon>
+      <ion-card-header>
+        <ion-card-title>Medicines</ion-card-title>
+        <ion-card-subtitle>1,000,000+ Medicines</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card class="service-card">
+      <ion-icon name="flask-outline" class="service-icon"></ion-icon>
+      <ion-card-header>
+        <ion-card-title>Lab Tests</ion-card-title>
+        <ion-card-subtitle>Free sample collection</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card class="service-card">
+      <ion-icon name="chatbubbles-outline" class="service-icon"></ion-icon>
+      <ion-card-header>
+        <ion-card-title>Unlimited Chats</ion-card-title>
+        <ion-card-subtitle>With 24x7 Doctor</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card class="service-card">
+      <ion-icon name="call-outline" class="service-icon"></ion-icon>
+      <ion-card-header>
+        <ion-card-title>Audio Call</ion-card-title>
+        <ion-card-subtitle>Request Callback</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card class="service-card">
+      <ion-icon name="videocam-outline" class="service-icon"></ion-icon>
+      <ion-card-header>
+        <ion-card-title>Video Call</ion-card-title>
+        <ion-card-subtitle>Request Video Call</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+</ion-content>
+
+<!-- Bottom Navigation Bar -->
+<ion-footer>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="appointments">
+        <ion-icon name="calendar-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="profile">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-footer>

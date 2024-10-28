@@ -8,6 +8,18 @@
  * For more information on global stylesheets, visit the documentation:
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
+// src/global.scss
+@font-face {
+  font-family: 'kapil';
+  src: url('/assets/Fonts/bricolage1.ttf') format('truetype'),
+}
+
+
+ion-content {
+  font-family: kapil;
+  --background: #fdfdfd;
+  --color: #000000;
+}
 
 /* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
