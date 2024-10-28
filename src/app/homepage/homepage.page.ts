@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Geolocation } from '@capacitor/geolocation';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomePage implements OnInit {
   loading: boolean = true;
   private openCageApiKey: string = 'bcc9c9065e4f4c74bb5c79e68b58c939';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
     this.getCurrentLocation();
@@ -51,5 +52,9 @@ export class HomePage implements OnInit {
         this.loading = false;
       }
     );
+  }
+
+  navigateTo(service: string) {
+    this.router.navigate([service]);
   }
 }

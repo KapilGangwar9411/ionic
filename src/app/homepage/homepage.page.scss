@@ -1,5 +1,6 @@
 .container {
   --background: #f8f9fb;
+  padding: 0;
 }
 
 .top-section {
@@ -7,26 +8,35 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff;
 }
 
 .location {
   font-size: 0.9em;
+  color: #333;
+  display: flex;
+  align-items: center;
 }
 
 .notification-icon {
-  font-size: 1.3em;
+  font-size: 1.5em;
+  color: #7a7a7a;
+  padding: 5px;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin: 10px 15px;
+  font-weight: bold;
+  color: #333;
 }
 
-ion-searchbar {
-  margin: 0 15px 20px;
+.search-bar {
+  margin: 10px 15px 20px;
   --background: #f1f1f1;
-  border-radius: 8px;
-  color: #333;
+  border-radius: 10px;
+  color: #555;
 }
 
 .services-grid {
@@ -38,38 +48,52 @@ ion-searchbar {
 
 .service-card {
   text-align: center;
-  border-radius: 8px;
+  border-radius: 15px; /* Make the corners more rounded */
   --background: #ffffff;
-  --ion-card-background: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden; /* Ensure content doesn't overflow the card */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25); /* Enhance shadow on hover */
 }
 
 .service-icon {
-  font-size: 2.5em;
+  font-size: 3em; /* Increased size for better visibility */
   color: #6b7280;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 ion-card-title {
-  font-size: 1em;
+  font-size: 1.2em; /* Slightly larger title */
   color: #333;
+  font-weight: bold; /* Bold title for emphasis */
 }
 
 ion-card-subtitle {
-  font-size: 0.85em;
-  color: #777;
+  font-size: 0.95em;
+  color: #555;
 }
 
 /* Bottom Navigation Bar */
-
 ion-footer {
   --background: #ffffff;
+  border-top: 1px solid #e0e0e0;
+}
+
+ion-tab-bar {
+  height: 60px;
 }
 
 ion-tab-button {
   color: #7a7a7a;
+  transition: color 0.2s;
 }
 
-ion-tab-button[tab="home"] ion-icon {
-  color: #1a73e8;
+ion-tab-button[tab="home"] ion-icon,
+ion-tab-button[tab="services"] ion-icon,
+ion-tab-button[tab="profile"] ion-icon {
+  color: #1a73e8; /* Active color for icons */
 }

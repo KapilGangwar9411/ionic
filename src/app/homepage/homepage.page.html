@@ -1,5 +1,4 @@
 <ion-content class="container">
-
   <!-- Top Section with Location and Notification -->
   <div class="top-section">
     <div class="location">
@@ -13,11 +12,11 @@
 
   <!-- Title and Search Bar -->
   <h2>What are you looking for?</h2>
-  <ion-searchbar placeholder="Search for doctor, medicine, etc."></ion-searchbar>
+  <ion-searchbar placeholder="Search for doctor, medicine, etc." class="search-bar"></ion-searchbar>
 
   <!-- Service Cards Section -->
   <div class="services-grid">
-    <ion-card class="service-card">
+    <ion-card class="service-card" (click)="navigateTo('doctors')">
       <ion-icon name="person-outline" class="service-icon"></ion-icon>
       <ion-card-header>
         <ion-card-title>Doctors</ion-card-title>
@@ -25,7 +24,7 @@
       </ion-card-header>
     </ion-card>
 
-    <ion-card class="service-card">
+    <ion-card class="service-card" (click)="navigateTo('medicines')">
       <ion-icon name="medkit-outline" class="service-icon"></ion-icon>
       <ion-card-header>
         <ion-card-title>Medicines</ion-card-title>
@@ -33,7 +32,7 @@
       </ion-card-header>
     </ion-card>
 
-    <ion-card class="service-card">
+    <ion-card class="service-card" (click)="navigateTo('lab-tests')">
       <ion-icon name="flask-outline" class="service-icon"></ion-icon>
       <ion-card-header>
         <ion-card-title>Lab Tests</ion-card-title>
@@ -41,7 +40,7 @@
       </ion-card-header>
     </ion-card>
 
-    <ion-card class="service-card">
+    <ion-card class="service-card" (click)="navigateTo('unlimited-chats')">
       <ion-icon name="chatbubbles-outline" class="service-icon"></ion-icon>
       <ion-card-header>
         <ion-card-title>Unlimited Chats</ion-card-title>
@@ -49,7 +48,7 @@
       </ion-card-header>
     </ion-card>
 
-    <ion-card class="service-card">
+    <ion-card class="service-card" (click)="navigateTo('audio-call')">
       <ion-icon name="call-outline" class="service-icon"></ion-icon>
       <ion-card-header>
         <ion-card-title>Audio Call</ion-card-title>
@@ -57,7 +56,7 @@
       </ion-card-header>
     </ion-card>
 
-    <ion-card class="service-card">
+    <ion-card class="service-card" (click)="navigateTo('video-call')">
       <ion-icon name="videocam-outline" class="service-icon"></ion-icon>
       <ion-card-header>
         <ion-card-title>Video Call</ion-card-title>
@@ -65,7 +64,6 @@
       </ion-card-header>
     </ion-card>
   </div>
-
 </ion-content>
 
 <!-- Bottom Navigation Bar -->
