@@ -16,6 +16,6 @@ export class LoginSignupPage {
   }
 
   skipLogin(): void {
-    this.router.navigate(['/homepage']);
+    this.router.navigate(['/loading']);
   }
 }

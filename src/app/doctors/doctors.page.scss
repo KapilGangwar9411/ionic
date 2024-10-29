@@ -1,0 +1,105 @@
+/* Header Styles */
+.glass-header {
+  background: transparent; /* Make the header transparent */
+  backdrop-filter: blur(10px); /* Glass effect */
+  box-shadow: none; /* Remove shadow for a flatter design */
+}
+
+/* Set header color to match page background */
+ion-toolbar {
+  --background: rgba(248, 249, 251, 0.8); /* Use the same color as the page */
+}
+
+ion-title{
+  font-family: kapil;
+  font-size:2rem;
+  color: #333;
+}
+/* Profile button styles */
+.profile-button {
+  padding: 10px; /* Increase padding for a larger clickable area */
+}
+
+.profile-icon {
+  font-size: 2em; /* Increased size for better visibility */
+  color: #333; /* Profile icon color */
+  transition: color 0.2s; /* Smooth color change on hover */
+}
+
+.profile-icon:hover {
+  color: #1a73e8; /* Change color on hover for interactivity */
+}
+
+/* Offers Banner Styles */
+.offers-banner {
+  text-align: center;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Banner Image Styles */
+.banner-image {
+  max-width: 100%; /* Make sure the image fits the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: rounded corners for the image */
+}
+
+/* Doctors Grid Styles */
+.doctors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 12px; /* Space between cards */
+  padding: 16px;
+}
+
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+}
+
+.doctor-avatar {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.doctor-info h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 8px 0 4px;
+}
+
+.doctor-info p {
+  color: #666;
+  font-size: 14px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #34c759;
+}
+
+.star-icon {
+  color: #34c759;
+  font-size: 14px;
+}
+
+.review-count {
+  color: #999;
+}

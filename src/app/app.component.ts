@@ -8,10 +8,11 @@ import { NavController } from '@ionic/angular';
 })
 export class AppComponent {
   constructor(private navCntl: NavController) {
+
     this.navCntl.navigateForward('/splash');
     setTimeout(() => {
       this.navCntl.navigateRoot(['/login']);
-    }, 3000);
+    }, 5000);
   }
 
 }

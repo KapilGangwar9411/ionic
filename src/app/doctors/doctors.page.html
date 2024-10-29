@@ -1,13 +1,64 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="glass-header">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Doctors</ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="profile-button">
+        <ion-icon name="person-circle-outline" class="profile-icon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Doctors</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Offers Banner -->
+  <div class="offers-banner">
+    <img src="assets/images/banner.png" alt="Special Offers" class="banner-image" />
+  </div>
+
+  <div class="doctors-grid">
+    <ion-card *ngFor="let doctor of doctors" (click)="viewDoctorDetails(doctor)" class="doctor-card">
+      <ion-avatar slot="start" class="doctor-avatar">
+        <img [src]="doctor.photoUrl" alt="Doctor's photo" />
+      </ion-avatar>
+      <ion-card-content class="doctor-info">
+        <h2>{{ doctor.name }}</h2>
+        <p>{{ doctor.specialty }}</p>
+        <div class="rating">
+          <ion-icon name="star" class="star-icon"></ion-icon>
+          <span>{{ doctor.rating }}</span>
+          <span class="review-count">({{ doctor.reviews }} reviews)</span>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+        <span>Home</span>
+      </ion-tab-button>
+
+      <ion-tab-button tab="messages">
+        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+        <span>Messages</span>
+      </ion-tab-button>
+
+      <ion-tab-button tab="booking">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <span>Booking</span>
+      </ion-tab-button>
+
+      <ion-tab-button tab="profile">
+        <ion-icon name="person-outline"></ion-icon>
+        <span>Profile</span>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-footer>

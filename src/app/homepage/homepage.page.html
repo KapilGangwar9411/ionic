@@ -2,7 +2,7 @@
   <!-- Top Section with Location and Notification -->
   <div class="top-section">
     <div class="location">
-      <ion-icon name="location-outline"></ion-icon>
+      <ion-icon name="location-outline" class="location-icon"></ion-icon>
       <span>Your Location</span>
       <p *ngIf="!loading">{{ location }}</p>
       <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>

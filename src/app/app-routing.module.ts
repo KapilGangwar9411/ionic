@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'video-call',
     loadChildren: () => import('./video-call/video-call.module').then(m => m.VideoCallPageModule),
+  },
+  {
+    path: 'loading',
+    loadChildren: () => import('./loading/loading.module').then( m => m.LoadingPageModule)
   }
 ];
 
